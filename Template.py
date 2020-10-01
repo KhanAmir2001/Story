@@ -156,8 +156,35 @@ def part1():
     return()
 
 def part2():
-
-    return()
+        print("You awake in an area you dont seem to recognise")
+        print("It's pitch black and filled with emptiness.")
+        input()
+        
+        print("In the distance you hear scurrying - lots and lots of scurrying")
+        print("getting closer and louder as the noise echoes off the walls.")
+        input()
+        
+        print("Something about this feels as if its happened before.")
+        print("You can not see... you decide you can either")
+        input()
+        
+        option = 0
+        while option != "1" or option != "2":
+            print("Press 1 to attempt to run.")
+            print("Press 2 to head towards the noise.")
+            option = input("")
+            if option == "1" or option == "2":
+                break
+        if option == "1":
+            print("You attempt to navigate away from the sound however you realise nothing exists beyond this point.")
+            print("You almost fall off the edge of whatever it is your standing on.")
+            print("You face no choice but to head towards the noise")
+            input()
+        print("You head towards the scurrying. You can not see and it is your only sense of direction.")
+        print("As you do you begin to notice a light but its not stationary - quite the opposite,")
+        print("in fact it's rushing towards you.")
+        input()
+        return()
 
 def part3():
         option = 0
