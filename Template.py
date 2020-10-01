@@ -8,6 +8,45 @@ def part2():
     return()
 
 def part3():
+        option = 0
+        print("Loading...")
+        print("Loading...")
+        print("Loading...")
+        input("Press enter to continue...")
+        print("")
+        print("You awake in a darkened room with a single fluorescent light dangling from the ceiling from a bare wire, shining right over you, stinging your eyes. You squint as you look into the distance. You cannot see any walls or the ceiling. Piles upon piles of pre-owned objects are spread out as far as you can see.")
+        input("Press enter to continue...")
+        print("")
+        print("A quiet roar of voices can be heard in the distance chanting numbers. You can't tell where they come from. Another sign stands tall in front of you, this one saying 'Sell your used items'.")
+        print("")
+        while option != "1" or option != "2":
+            print("Press 1 to investigate the numbers.")
+            print("Press 2 to investigate the site.")
+            option = input("")
+            if option == "1" or option == "2":
+                break
+        if option == "1":
+            print("You look up, to see giant floating numbers, seemingly assigned to each object. They vanish as fast as they appear: '50', '100', '120'. With each disappearance, the voices grow louder.")
+            input("Press enter to continue...")
+            print("")
+            print("Suddenly, the voices stop. The numbers stop appearing. A computer forces its way out of the mess and floats upwards. It keeps going until it cannot be seen. Once it's gone, vast numbers of objects clatter around you, most of which are technological. A TV, a fridge and a dishwasher land with a deafening crash.")
+            input("Press enter to continue...")
+            print("")
+        if option == "2":
+            print("You look around the area. Objects have been placed seemingly without a care. Some of these objects are surrounded by voices and prices. More objects pop into existence, and they don't stop coming.")
+            input("Press enter to continue...")
+            print("")
+            print("Vast numbers of objects clatter around you, most of which are technological. A derelict car leaking oil sits next to a frayed and worn sofa. A TV, a fridge and a dishwasher land with a deafening crash next to you.")
+            input("Press enter to continue...")
+            print("")
+        print("And with them, the voices grew louder. Price values grow larger and more frequent, more objects fall and crash from all directions as others soar upwards.")
+        input("Press enter to continue...")
+        print("")
+        print("Your head spins. The endless cacophony buries itself into your head and clutches you, refusing to let go. You don't want to be here anymore, you don't belong here in a place for the dead and unwanted.")
+        print("The already dark room grows black along with a feeling that you are no longer alone, as you slowly lose consciousness once more.")
+        input("Press enter to continue...")
+        print("")
+        print("RESTARTING")
 
     return()
 
