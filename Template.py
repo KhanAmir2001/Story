@@ -1,5 +1,6 @@
 def part1():
     print("test")
+    print("hello")
     return()
 
 def part2():
