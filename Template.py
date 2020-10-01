@@ -48,7 +48,7 @@ def part3():
         print("")
         print("RESTARTING")
 
-    return()
+        return()
 
 def part4():
 
@@ -83,7 +83,7 @@ def part5():
         print('"Warning: the site has officially shut down due to a DDOS attack.\nWe are sorry of the inconvenience.\nPlease accept our apologies and try later today or tomorrow"')
         
 
-    return()
+        return()
 
 part1()
 part2()
