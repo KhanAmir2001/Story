@@ -289,6 +289,50 @@ def part3():
         return()
 
 def part4():
+    option = 0
+    print("Loading...")
+    time.sleep(1)
+    print("...")
+    time.sleep(1)
+    print("New world has successfully loaded")
+    time.sleep(1)
+    print("You wake up in a dark room, you decide to get up and look around")
+    time.sleep(1)
+    input("Press enter to continue...")
+    print("")
+    print("You scan the room. You noticed that there is a list of instructions not too far from you. You decide to pick them up")
+    time.sleep(1)
+    input("Press enter to continue...")
+    print("This list of instructions tell you what your next task is. Your creator wants you to mine bitcoin. But you have to search for a tool that you can use")
+    print("")
+    while option != "1" or option != "2":
+        print("Press 1 to go left.")
+        print("Press 2 to go right.")
+        option = input("")
+        if option == "1" or option == "2":
+            break
+    if option == "1":
+        print("You decide to turn left, you see a box and decide to open it.")
+        print("")
+        print("Its exactly what you've been looking for, the tool needed to mine the bitcoin! Now you head back the way you came")
+        input("Press enter to continue...")
+        print("")
+    if option == "2":
+        print("You decide to turn right, the path seems to go on forever. It looks as if its been blocked off.")
+        print("Out of frustration you head back the way you came")
+        time.sleep(1)
+        print("This time you go down the left path and find what you are looking for. Eager to start, you head back")
+        input("Press enter to continue...")
+        print("")
+    time.sleep(1)
+    print("Now that you have the tool that you need to mine the bitcoin, you get started.")
+    print("Whilst you're working you noticed that it has gotten easier for you to mine bitcoin instead of endlessly searching. Could you have been updated by your creator?")
+    input("Press enter to continue")
+    time.sleep(1)
+    print("It's been about 2 weeks since you've startd working. No new updates and now you're starting to feel sluggish")
+    time.sleep(1)
+    print("The lights are getting dim. Maybe you should rest and go into sleep mode")
+    input("Press enter to continue")
 
     return()
 
