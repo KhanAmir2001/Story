@@ -1,6 +1,7 @@
 from tkinter import *
 
 x = -1
+y = -1
 choice = 0
 
 window = Tk()
@@ -34,8 +35,7 @@ def clicked():
             "Finally, an opening. You dive through the hole before the world closes it off from the rest of the universe.",
             "What you see before you amazes you... Beaches, rivers, rocky mountains and long open plains.",
             "You are frozen in awe as you continue to watch the world materialise in front of you...",
-            "You leave the sign behind to explore this new world growing before you.",
-            "Trees, forests, beaches, rivers. You gaze in amazement as a whole ecosystem renders in around you."]
+            ]
 
     global x
     x = x+1
@@ -50,7 +50,16 @@ def clicked():
 
     lbl.configure(text= res)
 
+def sidetrack():
+    global y
+    line = ["You leave the sign behind to explore this new world growing before you.",
+            "Trees, forests, beaches, rivers. You gaze in amazement as a whole ecosystem renders in around you."]
+    res = line[y]
+    lbl.configure(text = res)
+    y = y+1
+
 btn = Button(window, text="Click Me", command=clicked,)
+btn2 = Button(window, text="Click me", command=sidetrack)
 
 def option1():
     global choice
@@ -61,9 +70,10 @@ def option1():
     global x
     x=7
 def option2():
+    
     global choice
     choice = 2
-    btn.pack()
+    btn2.pack()
     choice1.pack_forget()
     choice2.pack_forget()
     global x
