@@ -17,15 +17,19 @@ lbl.pack()
 
 def clicked():
 
-    line = ["You stay with the sign...",
-            "You watch an entire forest grow before your very eyes.",
-            "The trees grow tall and eventually the sign is entangled in the dense undergrowth of the forest floor.",
-            "The lianas and creepers dominate the forest floor. The trees tower high above you as it were some sort of competition."]
+    line = ["Loading...",
+            "SUCCESSFULLY LOADED.",
+            "You see a sign that says `Welcome to Utopia` and walk towards it...",
+            "As you stare at the lonely sign, you notice a world start to evolve.",
+            "You watch in awe.",
+            "You watch the world slowly start to load in...",
+            "Stay with the sign, or explore?"]
 
     global x
     x = x+1
 
-    if x == 3:
+    if x == 6:
+        btn.pack_forget()
         choice1.pack()
         choice2.pack()
     
@@ -38,6 +42,9 @@ btn = Button(window, text="Click Me", command=clicked,)
 def option1():
     global choice
     choice = 1
+    btn.pack()
+    choice1.pack_forget()
+    choice2.pack_forget()
 
 def option2():
     global choice
