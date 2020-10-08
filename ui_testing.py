@@ -1,6 +1,7 @@
 from tkinter import *
 
 x = -1
+choice = 0
 
 window = Tk()
 
@@ -8,7 +9,7 @@ window.title("Python Story")
 
 window.geometry('700x400')
 
-lbl = Label(window, text="Hello")
+lbl = Label(window, text="Welcome to the story click next to continue")
 
 lbl.pack()
 
@@ -23,6 +24,10 @@ def clicked():
 
     global x
     x = x+1
+
+    if x == 3:
+        choice1.pack()
+        choice2.pack()
     
     res = line[x]
 
@@ -30,6 +35,19 @@ def clicked():
 
 btn = Button(window, text="Click Me", command=clicked,)
 
+def option1():
+    global choice
+    choice = 1
+
+def option2():
+    global choice
+    choice = 2
+
 btn.pack()
+choice1 = Button(window, command=option1, text="Option 1")
+choice2 = Button(window, command=option2, text="Option 2")
+
+
+    
 
 window.mainloop()
