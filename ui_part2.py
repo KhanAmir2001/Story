@@ -14,96 +14,86 @@ lbl = Label(window, text="Welcome to our story.")
 
 lbl.pack()
 
-def clicked():# runs when button is clicked
+def p2clicked():# runs when button is clicked
 
-    line = ["Loading...", #contains all text of main routes note doesnt keep alternate choices
-            "SUCCESSFULLY LOADED.",
-            "You see a sign that says `Welcome to Utopia` and walk towards it...",
-            "As you stare at the lonely sign, you notice a world start to evolve.",
-            "You watch in awe.",
-            "You watch the world slowly start to load in...",
-            "Stay with the sign, or explore?",
-            "You stay with the sign...",
-            "You watch an entire forest grow before your very eyes.",
-            "The trees grow tall and eventually the sign is entangled in the dense undergrowth of the forest floor.",
-            "The lianas and creepers dominate the forest floor. The trees tower high above you as it were some sort of competition.",
-            "Light is barely getting down to you, you start to feel worried.",
-            "You see movement in the trees and you feel uncomfortable.",
-            "You try to walk away but the forest seems to go on forever.",
-            "Your walk turns into a run as you try to find an escape from this never-ending biome.",
-            "You keep hearing life within the bushes and you run faster.",
-            "Finally, an opening. You dive through the hole before the world closes it off from the rest of the universe.",
-            "What you see before you amazes you... Beaches, rivers, rocky mountains and long open plains.",
-            "You are frozen in awe as you continue to watch the world materialise in front of you...",
-            "The world comes into view bit by bit.",
-            "Large towering mountains, vast golden sands, largo open meadows... You've never seen such beauty...",
-            "You have always wanted to live in a world like this... You feel happy.",
-            "You feel honoured to live in a world as advanced as this.",
-            "Many years later...",
-            "The world still looks as new as when it was created.",
-            "The rocky mountains still tower tall, the beaches are still golden, the meadows are still unspoiled.",
-            "Nothing has changed... You feel as if the creators have given up on you...",
-            "After years of nothingness, one day changes it all...",
-            "Suddenly, the rocky mountains start to dissolve...",
-            "...the forests start to shrink...",
-            "...the golden sands start to recede...",
-            "...the meadow starts to turn into a wasteland...",
-            "You look up and see those oh-so-familiar words emblazoned in the sky...",
-            "...",
-            "RESTARTING"]
+    line = ["You awake in an area you dont seem to recognise", #contains all text of main routes note doesnt keep alternate choices
+            "It's pitch black and filled with emptiness.",
+            "In the distance you hear scurrying - lots and lots of scurrying",
+            "getting closer and louder as the noise echoes off the walls.",
+            "You can not see... you decide you can either",
+            "You head towards the scurrying. You can not see and it is your only sense of direction.", #5 choice 
+            "As you do you begin to notice a light but its not stationary - quite the opposite,",
+            "The light reveals you are in a cave of some sorts",
+            "and seemingly quite deep in",
+            "Without much time to contemplate you are distracted,",
+            "the hoard of scurrying has arrived revealing itself to you.",
+            "Huge spiders at least 4 times the size of you are rushing",
+            "directly towards you all carrying large chunks of information",
+            "on their backs",
+            "Your walk turns into a run as you try to find an escape from this never-ending biome.", #14 choice 2
+            "You hide behind some rocks and watch as the spider constructs",
+            "a series of portals using the information carried on their backs",
+            "There is something beautiful about the simple nature of their",
+            "dedication to their work.",
+            "You are able to watch as they work with amazing efficiency,",
+            "never once getting in eithers way.",
+            "Once they construct all of them there is a brief moment of nothing",
+            "before one glows as if it was selected",
+            "It seems as if your world is going into that portal,",
+            "what wouldve happened had you stopped the spiders.",
+            "Did you bless the world or curse it?",]
 
     global x #uses global x to keep the list progressing when button is pressed
     x = x+1
 
-    if x == 6: #use this part to create 2 buttons on the appropriate line change the number depending
-        btn.pack_forget()
-        choice1.pack() #shows 2 choice buttons
-        choice2.pack()
+    if x == 5: #use this part to create 2 buttons on the appropriate line change the number depending
+        p2btn.pack_forget()
+        p2choice1.pack() #shows 2 choice buttons
+        p2choice2.pack()
 
     print("x is ",x) #debug purposes tracks list
     res = line[x]
 
     lbl.configure(text= res)
 
-def sidetrack(): #run from alternate button follows alternate path then goes back to main story
+def p2sidetrack(): #run from alternate button follows alternate path then goes back to main story
     global y
     print("y =",y) #debug purposes tracks list
-    if y == 2: #change the y value to when the alternate story ends
+    if y == 3: #change the y value to when the alternate story ends
         global x
-        x = 18 #change the x value to where in the main story you want to call back to
-        btn2.pack_forget()
-        btn.pack()
+        x = 5 #change the x value to where in the main story you want to call back to
+        p2btn2.pack_forget()
+        p2btn.pack()
         return()
-    line = ["You leave the sign behind to explore this new world growing before you.",
-            "Trees, forests, beaches, rivers. You gaze in amazement as a whole ecosystem renders in around you."] #keep all alternate text choices here
+    line = ["You attempt to navigate away from the sound however you realise nothing exists beyond this point.",
+            "You almost fall off the edge of whatever it is your standing on..",
+            "You face no choice but to head towards the noise"] #keep all alternate text choices here
     res = line[y] # idk why we did this
     lbl.configure(text = res) # changes the text
     y = y+1 # increments y to contintue progress
 
-btn = Button(window, text="Click Me", command=clicked,) #calls function when pressed
-btn2 = Button(window, text="Click me", command=sidetrack) #creates the illusion of the same button but actually runs different function
+p2btn = Button(window, text="Click Me", command=p2clicked,) #calls function when pressed
+p2btn2 = Button(window, text="Click me", command=p2sidetrack) #creates the illusion of the same button but actually runs different function
 
-def option1():
+def p2option1():
     global choice
     choice = 1
-    btn.pack()
-    choice1.pack_forget() #creates new button and hides choices
-    choice2.pack_forget()
-    global x
-    x=7
+    p2btn.pack()
+    p2choice1.pack_forget() #creates new button and hides choices
+    p2choice2.pack_forget()
     
-def option2():
+def p2option2():
     
     global choice
     choice = 2
-    btn2.pack()
-    choice1.pack_forget() #creates new button and hides choices
-    choice2.pack_forget()
+    p2btn2.pack()
+    p2choice1.pack_forget() #creates new button and hides choices
+    p2choice2.pack_forget()
     global x
-    x=18
-btn.pack()
-choice1 = Button(window, command=option1, text="Option 1") #option buttons
-choice2 = Button(window, command=option2, text="Option 2")
+    x=6
+p2btn.pack()
+p2choice1 = Button(window, command=p2option1, text="Head towards the sound") #option buttons
+p2choice2 = Button(window, command=p2option2, text="Navigate away from the sound")
 
 
     
