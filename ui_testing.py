@@ -76,6 +76,7 @@ def option1():
     choice2.pack_forget()
     global x
     x=7
+    
 def option2():
     
     global choice
