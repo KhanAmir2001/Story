@@ -1,7 +1,7 @@
 from tkinter import *
 
 x = -1
-y = -1
+y = 0
 choice = 0
 
 window = Tk()
@@ -45,13 +45,20 @@ def clicked():
         choice1.pack()
         choice2.pack()
 
-
+    print("x is ",x)
     res = line[x]
 
     lbl.configure(text= res)
 
 def sidetrack():
+    print("y =",y)
     global y
+    if y == 2:
+        global x
+        x = 2 #change this later
+        btn2.pack_forget()
+        btn.pack()
+        return()
     line = ["You leave the sign behind to explore this new world growing before you.",
             "Trees, forests, beaches, rivers. You gaze in amazement as a whole ecosystem renders in around you."]
     res = line[y]
