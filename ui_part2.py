@@ -50,6 +50,10 @@ def p2clicked():# runs when button is clicked
         p2btn.pack_forget()
         p2choice1.pack() #shows 2 choice buttons
         p2choice2.pack()
+    if x == 14:
+        p2btn.pack_forget()
+        p2choice3.pack()
+        p2choice4.pack()
 
     print("x is ",x) #debug purposes tracks list
     res = line[x]
@@ -72,8 +76,35 @@ def p2sidetrack(): #run from alternate button follows alternate path then goes b
     lbl.configure(text = res) # changes the text
     y = y+1 # increments y to contintue progress
 
+def p2loop():
+    global y
+    print("y =",y) #debug purposes tracks list
+    if y == 12: #change the y value to when the alternate story ends
+        global x
+        x = -1 #change the x value to where in the main story you want to call back to
+        p2btn3.pack_forget()
+        p2btn.pack()
+        return()
+    line = ["You attempt to attack the spiders by grabbing something",
+            "off one of their backs and swinging it as hard as you can",
+            "However on impact the spider is completely unphased in fact",
+            "not a single one acknowledges anything you did nor even you",
+            "as a person",
+            "Some bardge into you on their way but it seems they dont care",
+            "at all what you do, they all focus on their larger cause",
+            "They are all constructing something... something beautiful",
+            "They are creating portals to other worlds but they all seem incomplete",
+            "The last thing you wonder is if you caused this what did you",
+            "take from them",
+            "As you wonder the whole world stops.",
+            "A command comes from above F5"] #keep all alternate text choices here
+    res = line[y] # idk why we did this
+    lbl.configure(text = res) # changes the text
+    y = y+1 # increments y to contintue progress
+
 p2btn = Button(window, text="Click Me", command=p2clicked,) #calls function when pressed
 p2btn2 = Button(window, text="Click me", command=p2sidetrack) #creates the illusion of the same button but actually runs different function
+p2btn3 = Button(window, text="Click me", command=p2loop)
 
 def p2option1():
     global choice
@@ -91,9 +122,22 @@ def p2option2():
     p2choice2.pack_forget()
     global x
     x=6
+
+def p2option3():
+    p2btn.pack()
+    p2choice3.pack_forget()
+    p2choice4.pack_forget()
+
+def p2option4():
+    p2btn3.pack()
+    p2choice3.pack_forget()
+    p2choice4.pack_forget()
+
 p2btn.pack()
 p2choice1 = Button(window, command=p2option1, text="Head towards the sound") #option buttons
 p2choice2 = Button(window, command=p2option2, text="Navigate away from the sound")
+p2choice3 = Button(window, command=p2option3, text="Run from the spiders")
+p2choice4 = Button(window, command=p2option4, text="Fight the spiders")
 
 
     
