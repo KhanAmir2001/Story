@@ -51,8 +51,8 @@ def clicked():
     lbl.configure(text= res)
 
 def sidetrack():
-    print("y =",y)
     global y
+    print("y =",y)
     if y == 2:
         global x
         x = 2 #change this later
