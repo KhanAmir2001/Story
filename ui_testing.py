@@ -35,7 +35,22 @@ def clicked():
             "Finally, an opening. You dive through the hole before the world closes it off from the rest of the universe.",
             "What you see before you amazes you... Beaches, rivers, rocky mountains and long open plains.",
             "You are frozen in awe as you continue to watch the world materialise in front of you...",
-            ]
+            "The world comes into view bit by bit.",
+            "Large towering mountains, vast golden sands, largo open meadows... You've never seen such beauty...",
+            "You have always wanted to live in a world like this... You feel happy.",
+            "You feel honoured to live in a world as advanced as this.",
+            "Many years later...",
+            "The world still looks as new as when it was created.",
+            "The rocky mountains still tower tall, the beaches are still golden, the meadows are still unspoiled.",
+            "Nothing has changed... You feel as if the creators have given up on you...",
+            "After years of nothingness, one day changes it all...",
+            "Suddenly, the rocky mountains start to dissolve...",
+            "...the forests start to shrink...",
+            "...the golden sands start to recede...",
+            "...the meadow starts to turn into a wasteland...",
+            "You look up and see those oh-so-familiar words emblazoned in the sky...",
+            "...",
+            "RESTARTING"]
 
     global x
     x = x+1
@@ -55,7 +70,7 @@ def sidetrack():
     print("y =",y)
     if y == 2:
         global x
-        x = 2 #change this later
+        x = 18
         btn2.pack_forget()
         btn.pack()
         return()
