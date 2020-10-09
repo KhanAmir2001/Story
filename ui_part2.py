@@ -1,22 +1,22 @@
 from tkinter import *
-
-x = -1
-y = 0
-choice = 0
+# name all variables and functions with px depeding on your part
+x = -1 #list pointer 
+y = 0 #side story pointer
+choice = 0 #keeps track of what option the user selects
 
 window = Tk()
 
 window.title("Python Story")
 
-window.geometry('700x400')
+window.geometry('700x400') #declares window size ignore
 
 lbl = Label(window, text="Welcome to our story.")
 
 lbl.pack()
 
-def clicked():
+def clicked():# runs when button is clicked
 
-    line = ["Loading...",
+    line = ["Loading...", #contains all text of main routes note doesnt keep alternate choices
             "SUCCESSFULLY LOADED.",
             "You see a sign that says `Welcome to Utopia` and walk towards it...",
             "As you stare at the lonely sign, you notice a world start to evolve.",
@@ -52,42 +52,42 @@ def clicked():
             "...",
             "RESTARTING"]
 
-    global x
+    global x #uses global x to keep the list progressing when button is pressed
     x = x+1
 
-    if x == 6:
+    if x == 6: #use this part to create 2 buttons on the appropriate line change the number depending
         btn.pack_forget()
-        choice1.pack()
+        choice1.pack() #shows 2 choice buttons
         choice2.pack()
 
-    print("x is ",x)
+    print("x is ",x) #debug purposes tracks list
     res = line[x]
 
     lbl.configure(text= res)
 
-def sidetrack():
+def sidetrack(): #run from alternate button follows alternate path then goes back to main story
     global y
-    print("y =",y)
-    if y == 2:
+    print("y =",y) #debug purposes tracks list
+    if y == 2: #change the y value to when the alternate story ends
         global x
-        x = 18
+        x = 18 #change the x value to where in the main story you want to call back to
         btn2.pack_forget()
         btn.pack()
         return()
     line = ["You leave the sign behind to explore this new world growing before you.",
-            "Trees, forests, beaches, rivers. You gaze in amazement as a whole ecosystem renders in around you."]
-    res = line[y]
-    lbl.configure(text = res)
-    y = y+1
+            "Trees, forests, beaches, rivers. You gaze in amazement as a whole ecosystem renders in around you."] #keep all alternate text choices here
+    res = line[y] # idk why we did this
+    lbl.configure(text = res) # changes the text
+    y = y+1 # increments y to contintue progress
 
-btn = Button(window, text="Click Me", command=clicked,)
-btn2 = Button(window, text="Click me", command=sidetrack)
+btn = Button(window, text="Click Me", command=clicked,) #calls function when pressed
+btn2 = Button(window, text="Click me", command=sidetrack) #creates the illusion of the same button but actually runs different function
 
 def option1():
     global choice
     choice = 1
     btn.pack()
-    choice1.pack_forget()
+    choice1.pack_forget() #creates new button and hides choices
     choice2.pack_forget()
     global x
     x=7
@@ -97,12 +97,12 @@ def option2():
     global choice
     choice = 2
     btn2.pack()
-    choice1.pack_forget()
+    choice1.pack_forget() #creates new button and hides choices
     choice2.pack_forget()
     global x
     x=18
 btn.pack()
-choice1 = Button(window, command=option1, text="Option 1")
+choice1 = Button(window, command=option1, text="Option 1") #option buttons
 choice2 = Button(window, command=option2, text="Option 2")
 
 
